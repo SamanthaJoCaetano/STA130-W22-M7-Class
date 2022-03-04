@@ -1,0 +1,152 @@
+---
+title: "Module 7 R Code demo"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+In this session we will be coding & polling. I recommend having [pollev.com/sta](pollev.com/sta) open in a tab or saved for tthe first bit of this session.
+
+Prof Caetano has a friend who is expecting a baby in early March (yesterday was her due date)! In this demo, we'll explore the NCbirths data to investigate how big we should expect her friend's baby to be!
+
+
+```{r, warning=FALSE}
+library(tidyverse) # As usual
+
+#install.packages("Stat2Data")
+library(Stat2Data) # This package contains the NCbirths data
+
+# Sometimes, we need to use the data() function to load data from an R package into our R session
+data(NCbirths) # After running this line, you'll see it appear in the Environment pane in the top left :)
+glimpse(NCbirths)
+
+```
+
+# R Demo
+
+## Q1 - What do we know about these data? (and where can we find out?). Go to [pollev.com/sta](pollev.com/sta) to tick what you've learned about this data.
+
+###(a) When we load data from a package, where do we go to (hopefully) get more information about the data?
+```{r}
+#?NCbirths  # Type '?', then the name of the dataset (or you can type the name of a function to get more info about the function!)
+```
+
+
+###(b) How many observations are there in these data?
+
+
+###(c) What does each observation represent?
+
+
+###(d) Who contributed these data?
+
+
+
+
+## Q2 - Prof Caetano is more familiar with measuring babies' weights in pounds, so let's create a new variable called `BirthWeightLbs`. We'll use the fact that there are 16 oz in 1 lb.
+```{r}
+
+```
+
+## Q3 - Create a visualization to explore the association between the duration of a pregnancy (in weeks) and the baby's weight at birth. Describe this distribution.
+
+```{r}
+
+```
+
+Go to [pollev.com/sta](pollev.com/sta) to help us describe this visualization.
+
+
+## Q4 - Prof Caetano's friend is currently 34 weeks pregnant, so she is particularly interested in learning about the association between the duration of pregnancy and birthweight for babies born at 34 weeks or later (babies born before this time are quite premature and so their birthweight is not be as relevant).  Let's create a new tibble containing only observations for babies born in this range.
+```{r}
+
+```
+
+
+\newpage
+# Part A
+In this part, we'll explore the association between the duration of a pregnancy and birthweight (after 34 weeks gestation).
+
+
+
+## QA3 - Calculate the correlation between the number of weeks of pregnancy and birthweight (focusing only on babies born after 34 weeks gestation). Does the correlation reflect our intuition about the association between these two variables?
+```{r}
+
+```
+
+Go to [pollev.com/sta](pollev.com/sta) to show us your answer.
+
+
+
+## QA4 - Fit a linear regression model to predict the weight of a baby based on the duration of the pregnancy (in weeks), to find the least-squares estimates for the regression parameters. Create a visualization to visualize the association between weeks and birthweight for babies born at or after 34 weeks, adding the fitted regression line to the plot.
+```{r}
+
+```
+
+
+## QA5 - How can we interpret the estimated slope (beta1-hat)?
+
+
+
+## QA6 - How can we interpret the estimated intercept (beta0-hat)?
+
+
+
+
+## QA7 - Based on these data, is there evidence that the slope of this linear regression model significantly different from 0?
+
+
+
+## QA8 - What proportion of the variability in weight is explained by our regression model? What does this suggest?
+```{r}
+
+```
+
+Go to [pollev.com/sta](pollev.com/sta) to show us your answer.
+
+
+
+\newpage
+# Part B
+In this part, we'll explore the association between a mothers' smoking status and birthweight in infants born after 34 weeks gestation.
+
+## QB1 - Let's create a visualization to explore the association between mothers' smoking status and birthweight (after 34 weeks), and describe what we observe.
+```{r}
+
+```
+
+
+
+
+##  QB2 - Let's fit a linear regression model to predict the birthweight of a baby based on his/her mother's smoking status.
+```{r}
+
+```
+
+
+## QB3 - What is the baseline level in the model above?
+
+
+
+## QB4 - How can we interpret the estimated intercept (beta0-hat)?
+
+
+```{r}
+
+
+```
+
+## QB5 - How can we interpret the estimated slope (beta1-hat)?
+
+
+
+\newpage
+# Conclusion
+
+*Where do we go from here?*
+
+
+
+
+
+
