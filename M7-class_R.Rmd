@@ -7,7 +7,7 @@ output:
 
 In this session we will be coding & polling. I recommend having [pollev.com/sta](pollev.com/sta) open in a tab or saved for tthe first bit of this session.
 
-Prof Caetano has a friend who is expecting a baby in early March (yesterday was her due date)! In this demo, we'll explore the NCbirths data to investigate how big we should expect her friend's baby to be!
+Prof Caetano has a friend who is expecting a baby in April! In this demo, we'll explore the NCbirths data to investigate how big we should expect her friend's baby to be!
 
 
 ```{r, warning=FALSE}
